@@ -9,6 +9,7 @@ Using the Industrial Edge applications SLMP Configurator and SLMP Connector.
   * [Requirements](#requirements)
     * [Prerequisites](#prerequisites)
     * [Used components](#used-components)
+    * [PLC project](#plc-project)
   * [Installation](#installation)
   * [Usage](#usage)
   * [Documentation](#documentation)
@@ -37,9 +38,11 @@ Here we configure a connection to a Mitsubishi PLC FX5U (iQF), that supports the
 ### Prerequisites
 
 * Access to an Industrial Edge Management (IEM) with onboarded Industrial Edge Device (IED)
-* Installed system configurators and apps (see list "Used components")
-* Installed apps (see list "Used components")
-* IED is connected to PLC
+* IEM: Installed system configurator for Databus
+* IED: Installed system app Databus
+* IED: Installed app SLMP Configurator
+* IED: Installed app SLMP Connector
+* IED is connected to Mitsubishi PLC via Ethernet
 * Google Chrome (Version ≥ 72)
 
 ### Used components
@@ -48,22 +51,28 @@ Here we configure a connection to a Mitsubishi PLC FX5U (iQF), that supports the
   * IE Databus Configurator V 1.6.19
 * Industrial Edge Device (IED) V 1.3.0-57
   * IE Databus V 1.6.3
-* SLMP Configurator V1.0.0
-* SLMP Connector V1.0.0
+  * SLMP Configurator V1.0.0
+  * SLMP Connector V1.0.0
 * PLC: Mitsubishi FX5U
 * Google Chrome
 
+### PLC project
+
+The used project for the Mitsubishi PLC *PlcProject.zip* can be found in the [src folder](/src/).
+
 ## Installation
 
-How to install/run this application example? (i.e. how to deploy it to Industrial Edge device?) How to build this application? How to set up configurations in IE?
+You can find the further information about the following steps in the [Installation](/docs/Installation.md) documentation:
 
-To keep the readme.md file as short as possible please add more detailed information in the docs folder.
-
-* [Build application](docs/Installation.md#build-application)
+* [Install SLMP Configurator](/docs/Installation.md#install-slmp-configurator)
+* [Install SLMP Connector](/docs/Installation.md#install-slmp-connector)
+* [Configure SLMP Connector](/docs/Installation.md#configure-slmp-connector)
+* [Configure IE Databus](/docs/Installation.md#configure-ie-databus)
+* [Collect data in IE Flow Creator](/docs/Installation.md#collect-data)
 
 ## Usage
 
-When the app is installed, how can I use it? Usually some basic UI description to prove that the app is working correctly.
+xxx
 
 ## Documentation
 
