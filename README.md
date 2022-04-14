@@ -42,6 +42,7 @@ Here we configure a connection to a Mitsubishi PLC FX5U (iQF), that supports the
 * IED: Installed system app Databus
 * IED: Installed app SLMP Configurator
 * IED: Installed app SLMP Connector
+* IED: Installed app IE Flow Creator
 * IED is connected to Mitsubishi PLC via Ethernet
 * Google Chrome (Version ≥ 72)
 
@@ -53,6 +54,7 @@ Here we configure a connection to a Mitsubishi PLC FX5U (iQF), that supports the
   * IE Databus V 1.6.3
   * SLMP Configurator V1.0.0
   * SLMP Connector V1.0.0
+  * IE Flow Creator V1.3.3
 * PLC: Mitsubishi FX5U
 * Google Chrome
 
@@ -68,11 +70,15 @@ You can find the further information about the following steps in the [Installat
 * [Install SLMP Connector](/docs/Installation.md#install-slmp-connector)
 * [Configure SLMP Connector](/docs/Installation.md#configure-slmp-connector)
 * [Configure IE Databus](/docs/Installation.md#configure-ie-databus)
-* [Collect data in IE Flow Creator](/docs/Installation.md#collect-data)
 
 ## Usage
 
-xxx
+As soon as the SLMP Connector is configured to connect to the Mitsubishi PLC, data can be transfered.
+
+You can find the further information about how to use the SLMP connector in the [Usage](/docs/Usage.md) documentation:
+
+* [Read data](/docs/Usage.md#read-data)
+* [Write data](/docs/Usage.md#write-data)
 
 ## Documentation
 
