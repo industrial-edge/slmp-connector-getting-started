@@ -66,10 +66,9 @@ The used project for the Mitsubishi PLC *PlcProject.zip* can be found in the [sr
 
 You can find the further information about the following steps in the [Installation](/docs/Installation.md) documentation:
 
-* [Install SLMP Configurator](/docs/Installation.md#install-slmp-configurator)
-* [Install SLMP Connector](/docs/Installation.md#install-slmp-connector)
-* [Configure SLMP Connector](/docs/Installation.md#configure-slmp-connector)
 * [Configure IE Databus](/docs/Installation.md#configure-ie-databus)
+* [Install SLMP Configurator and Connector](/docs/Installation.md#install-slmp-configurator-and-connector)
+* [Configure SLMP Connector](/docs/Installation.md#configure-slmp-connector)
 
 ## Usage
 
