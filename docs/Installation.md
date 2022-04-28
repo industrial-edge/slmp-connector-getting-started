@@ -11,8 +11,8 @@ The SLMP Connector sends the transfered data to the Databus on the Industrial Ed
 
 You need to create a user and one or more topics in the Databus configuration, which cover the SLMP data:
 
-- *ie/m/j/simatic/v1/slmp1/dp/#* for SLMP metadata
-- *ie/d/j/simatic/v1/slmp1/dp/#* for SLMP data
+- ***ie/m/j/simatic/v1/slmp1/dp*** for SLMP metadata
+- ***ie/d/j/simatic/v1/slmp1/dp*** for SLMP data
 
 Therefore follow these steps:
 
