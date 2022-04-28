@@ -13,13 +13,15 @@ You need to create a user and one or more topics in the Databus configuration, w
 
 - *ie/m/j/simatic/v1/slmp1/dp/#* for SLMP metadata
 - *ie/d/j/simatic/v1/slmp1/dp/#* for SLMP data
-- status ???
 
 Therefore follow these steps:
 
 - open the Data Connections in the Industrial Edge Management (IEM)
 - open the configuration for the Databus
-- xxx
+- add a new user ("edge"/"edge") and the topic "ie/#", set permission to "Publish and Subscribe"
+- deploy the configuration
+
+![databus](/docs/graphics/Databus.png)
 
 ## Install SLMP Configurator and Connector
 
@@ -64,7 +66,6 @@ To add one or more data points, follow these steps:
 - in 'Acquisition Cycle' field choose the cycle time with which the data is sent to the Databus (100 ms - 10 s)
 - in 'Acquitition Mode' field choose 'CyclicOnChange'
 - in 'Access Mode' field choose 'Read and Write'
-- if needed, click on the '+' icon on the right site to add more tags
 - click 'Add Tags'
 
 ![configuration2](/docs/graphics/Configuration2.png)
