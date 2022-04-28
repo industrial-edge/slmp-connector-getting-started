@@ -79,4 +79,4 @@ To configure the connection to the Databus, follow these steps:
 
 ![configuration3](/docs/graphics/Configuration3.png)
 
-Finally click the 'Deploy' button to save the configuration for the SLMP Connector. Then click the 'Start Project' button to start the project.
+Finally click the **'Deploy'** button to save the configuration for the SLMP Connector. Then click the **'Start Project'** button to start the project.
