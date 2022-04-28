@@ -2,8 +2,8 @@
 
 - [Usage](#usage)
   - [Read metadata](#read-metadata)
-  - [Write data](#write-data)
   - [Read data](#read-data)
+  - [Write data](#write-data)
 
 Via the IE Flow Creator, we can write and read the SLMP data.
 
@@ -22,6 +22,8 @@ To print out the SLMP Connector metadata, follow these steps:
 ![metadata_flow](/docs/graphics/Metadata_Flow.png)
 
 ![metadata](/docs/graphics/Metadata.png)
+
+## Read data
 
 ## Write data
 
@@ -49,5 +51,3 @@ To write some data on the SLMP tags, follow these steps:
 ![json_bool](/docs/graphics/JSON_Int.png)
 
 ![json_bool](/docs/graphics/JSON_Real.png)
-
-## Read data
