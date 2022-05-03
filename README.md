@@ -76,8 +76,9 @@ As soon as the SLMP Connector is configured to connect to the Mitsubishi PLC, da
 
 You can find the further information about how to use the SLMP connector in the [Usage](/docs/Usage.md) documentation:
 
-* [Read data](/docs/Usage.md#read-data)
+* [Read metadata](/docs/Usage.md#read-metadata)
 * [Write data](/docs/Usage.md#write-data)
+* [Read data](/docs/Usage.md#read-data)
 
 ## Documentation
 
