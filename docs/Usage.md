@@ -1,4 +1,4 @@
-# Installation
+# Usage
 
 - [Usage](#usage)
   - [Read metadata](#read-metadata)
@@ -14,7 +14,7 @@ The used flow can be downloaded [here](/src/flow.json) and imported into the IE 
 To print out the SLMP Connector metadata, follow these steps:
 
 - create a mqtt in node
-- set the server to "ie-databus" with port 1883 and corresponding user name / password ("edge"/"edge")
+- set the server to "ie-databus" with port 1883 and corresponding user name/password ("edge"/"edge")
 - set the topic to `ie/m/j/simatic/v1/slmp1/dp`
 - create a debug node and connecto to the mqtt in node
 - deploy the flow and watch the debug window
@@ -23,7 +23,29 @@ To print out the SLMP Connector metadata, follow these steps:
 
 ![metadata](/docs/graphics/Metadata.png)
 
+Now you can see three configured datapoints according to SLMP Configurator settings:
+
+- "Bool" with unique id 102
+- "Int" with unique id 103
+- "Real" with unique id 104
+
 ## Read data
+
+To print out the transfered SLMP Connector data, you must fetch the tag ID from metadata payload based on the tag name. Please follow these steps:
+
+- create a mqtt in node
+- set the server to "ie-databus" with port 1883 and corresponding user name/password ("edge"/"edge")
+- set the topic to `ie/d/j/simatic/v1/slmp1/dp/r/#`
+- create a debug node and connecto to the mqtt in node
+- deploy the flow and watch the debug window
+
+![read_data_flow](/docs/graphics/Read_Data_Flow.png)
+
+![read_bool](/docs/graphics/Read_Bool.png)
+
+![read_bool](/docs/graphics/Read_Bool.png)
+
+![read_real](/docs/graphics/Read_Real.png)
 
 ## Write data
 
