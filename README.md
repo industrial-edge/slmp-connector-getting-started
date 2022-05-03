@@ -29,7 +29,7 @@ With the connection between an Industrial Edge Device (SLMP client) and a Mitsub
 
 ### General Task
 
-Here we configure a connection to a Mitsubishi PLC FX5U (iQF), that supports the SLMP protocol. The FX5U acts as SLMP server and the IED acts as SLMP client. Data is read from the FX5U and published on the Databus. By using the application IE Flow Creator, the received data on the dedicated topic can be print out.
+Here we configure a connection to a Mitsubishi PLC FX5U (iQF), that supports the SLMP protocol. The FX5U acts as SLMP server and the IED acts as SLMP client. By using the application IE Flow Creator, we fetch the metadata of the SLMP Connector, write some data on the configured tags and read out the new data.
 
 ![overview](/docs/graphics/Overview.png)
 
