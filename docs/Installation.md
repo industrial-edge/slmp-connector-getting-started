@@ -61,7 +61,7 @@ To add one or more data points, follow these steps:
 
 - click on the '+' icon at the right site of the data source row
 - in 'Name' field enter a name for the tag
-- in 'Address' field enter the address of the data point in the PLC
+- in 'Address' field enter the address of the data point in the PLC (format `<operand> <address>`)
 - in 'Data Type' field choose the proper data type
 - in 'Acquisition Cycle' field choose the cycle time with which the data is sent to the Databus (100 ms - 10 s)
 - in 'Acquitition Mode' field choose 'CyclicOnChange'
@@ -69,6 +69,19 @@ To add one or more data points, follow these steps:
 - click 'Add Tags'
 
 ![configuration2](/docs/graphics/Configuration2.png)
+
+Here is an overview of permitted data types for the Mitsubishi iQR/iQF PLCs:
+
+| Data type   | Operand | Length |
+| ----------- | ----------- |----------- |
+| Bool        | D, M, X, Y, F, B, SB, W, SW, SD, SM, CC, CS, TS, TC, LCS, LCC, STS, STC, LTS, LTC, LSTS, LSTC, L | 1 Bit            |
+| Int         | D, CN, W, TN, STN, SW     | 2 Byte            |
+| Word        | D, TN, CN, SW, STN, W, SD | 2 Byte            |
+| DWord       | D, LCN, W, SW, LTN, LSTN  | 4 Byte            |
+| DInt        | D, LCN, W, SW, LTN, LSTN  | 4 Byte            |
+| Real        | D, W, SW                  | 4 Byte            |
+| LReal       | D, W, SW                  | 8 Byte            |
+| String      | D, W, SW                  | 1 - 80 characters |
 
 To configure the connection to the Databus, follow these steps:
 
