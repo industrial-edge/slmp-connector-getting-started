@@ -1,84 +1,84 @@
-# Writing good how-to or tutorial
+# SLMP Connector
 
-Before you start writing, read the following materials how to write good documentation (including how-tos).
+Using the Industrial Edge applications SLMP Configurator and SLMP Connector.
 
-* [Google Developer style guide](https://developers.google.com/style)
-* [Technical writing Courses](https://developers.google.com/tech-writing)
-* [Microsoft Writing Style Guide](https://docs.microsoft.com/cs-cz/style-guide/welcome/)
-
-Then decide: Are you writing a tutorial or a how-to guide?
-
-[Divio](https://documentation.divio.com/) explains the difference  (Note that this applies for software documentation for application developers)
-
-* Tutorials are lessons that take the reader by the hand through a series of steps to complete a project of some kind. They are what your project needs in order to show a beginner that they can achieve something with it. https://documentation.divio.com/tutorials/
-* How-to guides take the reader through the steps required to solve a real-world problem
-
-Each have a different writing style. Tutorials must be bullet proof (no unexpected behavior) https://documentation.divio.com/how-to-guides/
-
-Note: Try to write the tutorials and how-tos as a standalone html page, ready to be generated using Static site generator [MkDocs](https://www.mkdocs.org/). When referencing code examples or files, use the full URL of the git repository. We want to reuse these how-tos and tutorials in Documentation website.
-
-Don't explain concepts. [It gets in a way of action](https://documentation.divio.com/how-to-guides/#don-t-explain-concepts).  
-
-Don't use HTML tags unless working with videos. And try to avoid using videos unless absolutely necessary. Don't upload videos to Git repository.
-
-Bellow you can find the structure of IE tow-to/tutorial
-
-- [Writing good how-to or tutorial](#writing-good-how-to-or-tutorial)
-  - [Description](#description)
-    - [Overview](#overview)
-    - [General Task](#general-task)
-  - [Requirements](#requirements)
-    - [Prerequisites](#prerequisites)
-    - [Used components](#used-components)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Documentation](#documentation)
-  - [Contribution](#contribution)
-  - [Licence and Legal Information](#licence-and-legal-information)
+* [SLMP Connector](#slmp-connector)
+  * [Description](#description)
+    * [Overview](#overview)
+    * [General Task](#general-task)
+  * [Requirements](#requirements)
+    * [Prerequisites](#prerequisites)
+    * [Used components](#used-components)
+    * [PLC project](#plc-project)
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Documentation](#documentation)
+  * [Contribution](#contribution)
+  * [Licence and Legal Information](#licence-and-legal-information)
 
 ## Description
 
 ### Overview
 
-Why has been this how-to/tutorial created? What is the purpose?
+This tutorial shows how to use the Industrial Edge applications SLMP Configurator and SLMP Connector to establish a connection to a Mitsubishi PLC. These PLC variants are supported:
+
+* Mitsubishi iQR series
+* Mitsubishi iQF series
+
+With the connection between an Industrial Edge Device (SLMP client) and a Mitsubishi PLC (SLMP server) data can be transfered. On the Industrial Edge Device (IED), the data is published to the Databus. From there the data can be used within other Edge apps.
 
 ### General Task
 
-What is the general goal/task of this how-to/tutorial?
+Here we configure a connection to a Mitsubishi PLC FX5U (iQF), that supports the SLMP protocol. The FX5U acts as SLMP server and the IED acts as SLMP client. By using the application IE Flow Creator, we fetch the metadata of the SLMP Connector, write some data on the configured tags and read out the new data.
 
-![task](docs/graphics/example_graphic.png)
+![overview](/docs/graphics/Overview.png)
 
 ## Requirements
 
 ### Prerequisites
 
-What are the requirements on the user knowledge, HW components before starting the how-to?
+* Access to an Industrial Edge Management (IEM) with onboarded Industrial Edge Device (IED)
+* IEM: Installed system configurator for Databus
+* IED: Installed system app Databus
+* IED: Installed app SLMP Configurator
+* IED: Installed app SLMP Connector
+* IED: Installed app IE Flow Creator
+* IED is connected to Mitsubishi PLC via Ethernet
+* Google Chrome (Version ≥ 72)
 
 ### Used components
 
-List the used software and hardware components that were tested with this how-to.
-Add the used components here (e.g.)
+* Industrial Edge Management (IEM) V1.4.0-42 / V1.5.6
+  * IE Databus Configurator V 1.6.19
+* Industrial Edge Device (IED) V 1.3.0-57
+  * IE Databus V 1.6.3
+  * SLMP Configurator V1.0.0
+  * SLMP Connector V1.0.0
+  * IE Flow Creator V1.3.3
+* PLC: Mitsubishi FX5U
+* Google Chrome
 
-* Industrial Edge App Publisher V1.0.8
-* Docker Engine 18.09.6
-* Docker Compose V2.4
-* S7 Connector V 1.0.22
-* S7 Connector Configurator V 1.0.9
-* Industrial Edge Device V 1.0.0-34
-* TIA Portal V16
-* PLC: CPU 1511 FW 2.8.3
+### PLC project
+
+The used project for the Mitsubishi PLC *PlcProject.zip* can be found in the [src folder](/src/).
 
 ## Installation
 
-How to install/run this application example? (i.e. how to deploy it to Industrial Edge device?) How to build this application? How to set up configurations in IE?
+You can find the further information about the following steps in the [Installation](/docs/Installation.md) documentation:
 
-To keep the readme.md file as short as possible please add more detailed information in the docs folder.
-
-* [Build application](docs/Installation.md#build-application)
+* [Configure IE Databus](/docs/Installation.md#configure-ie-databus)
+* [Install SLMP Configurator and Connector](/docs/Installation.md#install-slmp-configurator-and-connector)
+* [Configure SLMP Connector](/docs/Installation.md#configure-slmp-connector)
 
 ## Usage
 
-When the app is installed, how can I use it? Usually some basic UI description to prove that the app is working correctly.
+As soon as the SLMP Connector is configured to connect to the Mitsubishi PLC, data can be transfered.
+
+You can find the further information about how to use the SLMP connector in the [Usage](/docs/Usage.md) documentation:
+
+* [Read metadata](/docs/Usage.md#read-metadata)
+* [Write data](/docs/Usage.md#write-data)
+* [Read data](/docs/Usage.md#read-data)
 
 ## Documentation
 
@@ -100,7 +100,6 @@ Additionally everybody is free to propose any changes to this repository using P
 
 If you are interested in contributing via Pull Request, please check the [Contribution License Agreement](Siemens_CLA_1.1.pdf) and forward a signed copy to [industrialedge.industry@siemens.com](mailto:industrialedge.industry@siemens.com?subject=CLA%20Agreement%20Industrial-Edge).
 
-## License and Legal Information
+## Licence and Legal Information
 
 Please read the [Legal information](LICENSE.txt).
-

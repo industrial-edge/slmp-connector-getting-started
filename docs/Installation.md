@@ -1,71 +1,97 @@
 # Installation
 
 - [Installation](#installation)
-  - [Build application](#build-application)
-    - [Cloning image](#cloning-image)
-    - [Build docker image](#build-docker-image)
-  - [Upload  App to the Industrial Edge Managment](#upload--app-to-the-industrial-edge-managment)
-    - [Connect your Industrial Edge App Publisher](#connect-your-industrial-edge-app-publisher)
-    - [Upload  App using the Industrial Edge App Publisher](#upload--app-using-the-industrial-edge-app-publisher)
-  - [Deploying of App](#deploying-of-app)
-    - [Configuring application](#configuring-application)
-    - [Add additional installation steps here, if required](#add-additional-installation-steps-here-if-required)
-      - [Additional steps](#additional-steps)
-  
-## Build application
+  - [Configure IE Databus](#configure-ie-databus)
+  - [Install SLMP Configurator and Connector](#install-slmp-configurator-and-connector)
+  - [Configure SLMP Connector](#configure-slmp-connector)
 
-### Cloning image
+## Configure IE Databus
 
-- Clone or Download the source code to your engineering VM
+The SLMP Connector sends the transfered data to the Databus on the Industrial Edge Device (IED). From there the data can be used for further processing.
 
-### Build docker image
+You need to create a user and one or more topics in the Databus configuration, which cover the SLMP data:
 
-Add instruction how to build your application, e.g.:
+- ***ie/m/j/simatic/v1/slmp1/dp*** for SLMP metadata
+- ***ie/d/j/simatic/v1/slmp1/dp*** for SLMP data
 
-- Open console in the source code folder
-- Use command `docker-compose build` to create the docker image.
-- This docker image can now be used to build you app with the Industrial Edge App Publisher
-- *docker images | grep scannerapp* can be used to check for the images
-- You should get a result similiar to this:
+Therefore follow these steps:
 
-## Upload  App to the Industrial Edge Managment
+- open the Data Connections in the Industrial Edge Management (IEM)
+- open the configuration for the Databus
+- add a new user ("edge"/"edge") and the topic "ie/#", set permission to "Publish and Subscribe"
+- deploy the configuration
 
-Please find below a short description how to publish your application in your IEM.
+![databus](/docs/graphics/Databus.png)
 
-For more detailed information please see the section for [uploading apps to the IEM](https://github.com/industrial-edge/upload-app-to-iem).
+## Install SLMP Configurator and Connector
 
-### Connect your Industrial Edge App Publisher
+Make sure the SLMP Configurator and the SLMP Connector are available in your IEM catalog. Proceed the following steps to install the apps on your IED:
 
-- Connect your Industrial Edge App Publisher to your docker engine
-- Connect your Industrial Edge App Publisher to your Industrial Edge Managment System
+- open the catalog in the IEM
+- select the SLMP Configurator
+- click 'Install'
+- in the tab 'Configurations' click 'Next'
+- in the tab 'Devices' choose your IED
+- click 'Install Now'
+- if needed, allow the installation warnings
 
-### Upload  App using the Industrial Edge App Publisher
+Repeat the same steps for the SLMP Connector.
 
-- Create a new application using the Industrial Publisher
-- Add a app new version
-- Import the [docker-compose](../docker-compose.yml) file using the **Import YAML** button
-- The warning `Build (sevices >> scanner-service) is not supported` can be ignored
-- **Start Upload** to transfer the app to Industrial Edge Managment
-- Further information about using the Industrial Edge App Publisher can be found in the [IE Hub](https://iehub.eu1.edge.siemens.cloud/documents/appPublisher/en/start.html)
+![installation1](/docs/graphics/Installation1.png)
 
-## Deploying of App
+![installation2](/docs/graphics/Installation2.png)
 
-### Configuring application
+## Configure SLMP Connector
 
-If your app needs additional configuration you can add further description here, e.g. [param.json](../cfg-data/param.json)
+The SLMP Configurator allows you to add field devices to the IED and to create data points. Both SLMP apps need to be installed on your IED. Login to the IED and open the SLMP Configurator UI.
 
-```json
-{
-    "Parameter1": "Siemens AG",
-    "Parameter2": "edge",
-    "Parameter3": "edge"
-}
-```
+To add a new connection to a Mitsubishi PLC, follow these steps:
 
-Add description of the configuration here:
+- click 'Add Data Source' to configure a new connection
+- in 'Data Source Type' field choose 'SLMP'
+- in 'Name' field enter a name for the data source
+- in 'IP Address' field enter the IP address of the source PLC
+- in 'Port' field enter the port number as configured for the PLC module (from 1-65534)
+- in 'CPU Type' field choose the proper type (Mitsubishi iQR series / Mitsubishi iQF series)
+- click 'Add'
 
-### Add additional installation steps here, if required
+![configuration1](/docs/graphics/Configuration1.png)
 
-#### Additional steps
+To add one or more data points, follow these steps:
 
-Add description here
+- click on the '+' icon at the right site of the data source row
+- in 'Name' field enter a name for the tag
+- in 'Address' field enter the address of the data point in the PLC (format `<operand> <address>`)
+- in 'Data Type' field choose the proper data type
+- in 'Acquisition Cycle' field choose the cycle time with which the data is sent to the Databus (100 ms - 10 s)
+- in 'Acquitition Mode' field choose 'CyclicOnChange'
+- in 'Access Mode' field choose 'Read and Write'
+- click 'Add Tags'
+
+![configuration2](/docs/graphics/Configuration2.png)
+
+Here is an overview of permitted data types for the Mitsubishi iQR/iQF PLCs:
+
+| Data type   | Operand | Length |
+| ----------- | ----------- |----------- |
+| Bool        | D, M, X, Y, F, B, SB, W, SW, SD, SM, CC, CS, TS, TC, LCS, LCC, STS, STC, LTS, LTC, LSTS, LSTC, L | 1 Bit            |
+| Int         | D, CN, W, TN, STN, SW     | 2 Byte            |
+| Word        | D, TN, CN, SW, STN, W, SD | 2 Byte            |
+| DWord       | D, LCN, W, SW, LTN, LSTN  | 4 Byte            |
+| DInt        | D, LCN, W, SW, LTN, LSTN  | 4 Byte            |
+| Real        | D, W, SW                  | 4 Byte            |
+| LReal       | D, W, SW                  | 8 Byte            |
+| String      | D, W, SW                  | 1 - 80 characters |
+
+To configure the connection to the Databus, follow these steps:
+
+- click on the settings icon on the top right site
+- in 'UserName' field enter the user name according to the Databus configuration
+- in 'Password' field enter the password according to the Databus configuration
+- click 'Save'
+
+![configuration3](/docs/graphics/Configuration3.png)
+
+Finally click the **'Deploy'** button to save the configuration for the SLMP Connector. Then click the **'Start Project'** button to start the project.
+
+Now data can be transferred via the SLMP connection. Please find more information in the  [Usage](/docs/Usage.md) documentation.
