@@ -82,10 +82,6 @@ You can find the further information about how to use the SLMP connector in the 
 
 ## Documentation
 
-Add links to documentation. Either on external URL or in the doc folder. Please use always link to a file not to a directory (it doesn't work with static site generator engines).
-
-Add these links:
-
 You can find further documentation and help in the following links
 
 * [Industrial Edge Hub](https://iehub.eu1.edge.siemens.cloud/#/documentation)
