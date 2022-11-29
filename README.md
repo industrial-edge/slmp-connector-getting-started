@@ -10,7 +10,7 @@ Using the Industrial Edge applications SLMP Configurator and SLMP Connector.
     * [Prerequisites](#prerequisites)
     * [Used components](#used-components)
     * [PLC project](#plc-project)
-  * [Installation](#installation)
+  * [Configuration](#configuration)
   * [Usage](#usage)
   * [Documentation](#documentation)
   * [Contribution](#contribution)
@@ -20,16 +20,18 @@ Using the Industrial Edge applications SLMP Configurator and SLMP Connector.
 
 ### Overview
 
-This tutorial shows how to use the Industrial Edge applications SLMP Configurator and SLMP Connector to establish a connection to a Mitsubishi PLC. These PLC variants are supported:
+This tutorial shows how to use the Industrial Edge application SLMP Connector to establish a connection between an Industrial Edge Device (IED) and a 3rd party PLC that supports SLMP (Seamless Messaging Protocol), which is a client/server protocol for point to point communication between standard TCP/IP Ethernet devices and CC-Link IE networks.
+
+These PLC variants are supported:
 
 * Mitsubishi iQR series
 * Mitsubishi iQF series
 
-With the connection between an Industrial Edge Device (SLMP client) and a Mitsubishi PLC (SLMP server) data can be transfered. On the Industrial Edge Device (IED), the data is published to the Databus. From there the data can be used within other Edge apps.
+The SLMP Connector is an application that runs on the individual IED. Connections can be configured using the Common Configurator for Industrial Edge. The connector transfers the value series of selected data points from a PLC to the Databus. From there the data can be used within other Edge apps, e.g. the Flow Creator.
 
 ### General Task
 
-Here we configure a connection to a Mitsubishi PLC FX5U (iQF), that supports the SLMP protocol. The FX5U acts as SLMP server and the IED acts as SLMP client. By using the application IE Flow Creator, we fetch the metadata of the SLMP Connector, write some data on the configured tags and read out the new data.
+Here we configure a connection to a Mitsubishi PLC FX5U (iQF) using the SLMP Connector. The FX5U acts as SLMP server and the IED acts as SLMP client. The data is published on the IE Databus. By using the application IE Flow Creator, we fetch the metadata of the SLMP Connector, write some data on the configured tags and read out the new data.
 
 ![overview](/docs/graphics/Overview.png)
 
@@ -40,45 +42,49 @@ Here we configure a connection to a Mitsubishi PLC FX5U (iQF), that supports the
 * Access to an Industrial Edge Management (IEM) with onboarded Industrial Edge Device (IED)
 * IEM: Installed system configurator for Databus
 * IED: Installed system app Databus
-* IED: Installed app SLMP Configurator
 * IED: Installed app SLMP Connector
 * IED: Installed app IE Flow Creator
 * IED is connected to Mitsubishi PLC via Ethernet
+* GX Works 3 project loaded on PLC
 * Google Chrome (Version ≥ 72)
 
 ### Used components
 
-* Industrial Edge Management (IEM) V1.4.0-42 / V1.5.6
-  * IE Databus Configurator V 1.6.19
-* Industrial Edge Device (IED) V 1.3.0-57
-  * IE Databus V 1.6.3
-  * SLMP Configurator V1.0.0
-  * SLMP Connector V1.0.0
-  * IE Flow Creator V1.3.3
+* Industrial Edge Management (IEM) V1.5.1-4 / V1.8.6
+  * IE Databus Configurator V 1.7.8
+* Industrial Edge Device (OS) V1.8.0-6
+  * IE Databus V 1.7.1
+  * IIH Configurator V 1.4.0-1
+  * Registry Service V 1.4.0
+  * SLMP Connector V2.0.0 ***TODO***
+  * IE Flow Creator V1.3.9
+  * Data Service V1.4.0
 * PLC: Mitsubishi FX5U
-* Google Chrome
+* GX Works 3 (Mitsubishi engineering software)
 
 ### PLC project
 
-The used project for the Mitsubishi PLC *PlcProject.zip* can be found in the [src folder](/src/).
+The used project for the Mitsubishi PLC *PlcProject.zip* can be found in the [src folder](/src/). ***TODO***
 
-## Installation
+## Configuration
 
-You can find the further information about the following steps in the [Installation](/docs/Installation.md) documentation:
+You can find further information about the following steps in the [Configuration](/docs/Installation.md) documentation:
 
-* [Configure IE Databus](/docs/Installation.md#configure-ie-databus)
-* [Install SLMP Configurator and Connector](/docs/Installation.md#install-slmp-configurator-and-connector)
-* [Configure SLMP Connector](/docs/Installation.md#configure-slmp-connector)
+- [Overview](/docs/Installation.md#overview)
+- [Install SLMP Connector](/docs/Installation.md#install-slmp-connector)
+- [Configure IE Databus](/docs/Installation.md#configure-ie-databus)
+- [Configure SLMP via IIH Configurator](/docs/Installation.md#configure-slmp-via-iih-configurator)
 
 ## Usage
 
-As soon as the SLMP Connector is configured to connect to the Mitsubishi PLC, data can be transfered.
+As soon as the SLMP Connector is configured, data can be transfered.
 
-You can find the further information about how to use the SLMP connector in the [Usage](/docs/Usage.md) documentation:
+You can find further information about how to handle the data via the IE Flow Creator in the [Usage](/docs/Usage.md) documentation:
 
 * [Read metadata](/docs/Usage.md#read-metadata)
 * [Write data](/docs/Usage.md#write-data)
 * [Read data](/docs/Usage.md#read-data)
+* [Use Data Service](/docs/Usage.md#use-data-service)
 
 ## Documentation
 
