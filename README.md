@@ -51,20 +51,20 @@ Here we configure a connection to a Mitsubishi PLC FX5U (iQF) using the SLMP Con
 ### Used components
 
 * Industrial Edge Management (IEM) V1.5.1-4 / V1.8.6
-  * IE Databus Configurator V 1.7.8
+  * IE Databus Configurator V1.7.8
 * Industrial Edge Device (OS) V1.8.0-6
-  * IE Databus V 1.7.1
-  * IIH Configurator V 1.4.0-1
-  * Registry Service V 1.4.0
-  * SLMP Connector V2.0.0 ***TODO***
-  * IE Flow Creator V1.3.9
-  * Data Service V1.4.0
+  * IE Databus V1.7.1
+  * IIH Configurator V1.5.0
+  * Registry Service V1.5.0
+  * SLMP Connector V2.0.0-2
+  * IE Flow Creator V1.10.0-3
+  * Data Service V1.5.0
 * PLC: Mitsubishi FX5U
 * GX Works 3 (Mitsubishi engineering software)
 
 ### PLC project
 
-The used project for the Mitsubishi PLC *PlcProject.zip* can be found in the [src folder](/src/). ***TODO***
+The used PLC project *PlcProject.zip* can be found in the [src folder](/src/). ***TODO***
 
 ## Configuration
 
