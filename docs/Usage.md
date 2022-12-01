@@ -24,23 +24,17 @@ To print out the SLMP Connector metadata, follow these steps:
 
 ![metadata](/docs/graphics/Metadata.png)
 
-Now you can see three configured datapoints according to SLMP Configurator settings:
+Now you can see the configured datapoints according to SLMP Configurator settings:
 
- ***TODO***
-
-- ***Bool*** with unique id 102
-- ***Int*** with unique id 103
-- ***Real*** with unique id 104
+- ***Tag_Word*** with unique id 102
+- ***Tag_Bool*** with unique id 103
 
 ## Write data
 
 To write some data on the SLMP tags, you must fetch the tag ID from metadata payload based on the tag name. Please follow these steps:
 
-***TODO***
-
-- for the ***BOOL*** tag, create an inject node with this JSON payload: `{ "vals": [ { "id": "102", "val": "true" } ] }`
-- for the ***Int*** tag, create an inject node with this JSON payload: `{ "vals": [ { "id": "103", "val": "111" } ] }`
-- for the ***Real*** tag, create an inject node with this JSON payload: `{ "vals": [ { "id": "104", "val": "555.55" } ] }`
+- for the ***Tag_Word*** tag, create an inject node with this JSON payload: `{ "vals": [ { "id": "102", "val": "111" } ] }` ***TODO*** ?? raus ??
+- for the ***Tag_Bool*** tag, create an inject node with this JSON payload: `{ "vals": [ { "id": "103", "val": "true" } ] }` ***TODO***
 - create a mqtt out node
 - set the server to 'ie-databus' with port 1883 and corresponding user name/password ('edge'/'edge')
 - set the topic to `ie/d/j/simatic/v1/slmp1/dp/w/FX5`
@@ -63,19 +57,13 @@ To print out the transfered SLMP Connector data, you must fetch the tag ID from 
 
 ![read_data_flow](/docs/graphics/Read_Data_Flow.png)
 
-***TODO***
+Output for tag ***Tag_Word*** with ID 102:
 
-Output for tag ***Bool*** with ID 102:
+![read_bool](/docs/graphics/Read_1.png)
 
-![read_bool](/docs/graphics/Read_Bool.png)
+Output for tag ***Tag_Bool*** with ID 103:
 
-Output for tag ***Int*** with ID 103:
-
-![read_int](/docs/graphics/Read_Int.png)
-
-Output for tag ***Real*** with ID 104:
-
-![read_real](/docs/graphics/Read_Real.png)
+![read_int](/docs/graphics/Read_2.png)
 
 ## Use Data Service
 
@@ -91,9 +79,7 @@ To activate the data transfer from the SLMP Connector, proceed as following:
 
 ![DataServiceAdapter](/docs/graphics/DataService_Adapter.png)
 
-- go to tab 'Assets & Connectivity' and add the variable, that was configured within the SLMP Connector
-
-***TODO***
+- go to tab 'Assets & Connectivity' and add the variables, that were configured within the SLMP Connector
 
 ![DataServiceAdapter](/docs/graphics/DataService_Add.png)
 
