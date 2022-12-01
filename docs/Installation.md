@@ -76,9 +76,9 @@ As soon as the SLMP Connector is installed and started on the same IED as the II
 ![configuration1](/docs/graphics/Configuration1.png)
 
 - under column 'Actions' of the newly created PLC, choose 'Add tag'
-- configure a tag as needed and save
-
- ***TODO***
+- configure the seetins for tag "Tag_Word" as needed and save
+- under column 'Actions' of the newly created PLC, choose 'Add tag'
+- configure the seetins for tag "Tag_Bool" as needed and save
 
 ![configuration2](/docs/graphics/Configuration2.png)
 
@@ -97,13 +97,9 @@ Here is an overview of permitted data types for the Mitsubishi iQR/iQF PLCs:
 
 - select the newly created PLC and click 'Deploy' to save the configuration and start the project
 
-***TODO***
-
 ![Deploy](/docs/graphics/IIH_Deploy.png)
 
 - back on the overview page 'Databus connectors', the status of the SLMP Connector should be shown as **connected**
-
-***TODO***
 
 ![Connected](/docs/graphics/IIH_Connected.png)
 
