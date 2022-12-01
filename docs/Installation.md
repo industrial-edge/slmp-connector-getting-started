@@ -77,6 +77,10 @@ Here is an overview of permitted data types for the Mitsubishi iQR/iQF PLCs:
 | LReal       | D, W, SW                  | 8 Byte            |
 | String      | D, W, SW                  | 1 - 80 characters |
 
+The PLC has the following configuration within GX Works 3:
+
+![GXWorks_Config](/docs/graphics/GXWorks_Config.png)
+
 To configure the SLMP Connector, proceed as following:
 
 - go to the tab 'Get data' and select tab 'Databus connectors'
