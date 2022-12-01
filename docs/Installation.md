@@ -62,7 +62,22 @@ With the IIH Configurator, you can configure several connectors and publish the 
 
 ![IIH_Settings](/docs/graphics/IIH_Settings.png)
 
-As soon as the SLMP Connector is installed and started on the same IED as the IIH Configurator, the connector is visible within the configurator. In this example we want to configure an SLMP connection to a Mitsubishi FX5U (iQF) PLC. To configure the SLMP Connector, proceed as following:
+As soon as the SLMP Connector is installed and started on the same IED as the IIH Configurator, the connector is visible within the configurator. In this example we want to configure an SLMP connection to a Mitsubishi FX5U (iQF) PLC.
+
+Here is an overview of permitted data types for the Mitsubishi iQR/iQF PLCs:
+
+| Data type   | Operand     | Length     |
+| ----------- | ----------- |----------- |
+| Bool        | D, M, X, Y, F, B, SB, W, SW, SD, SM, CC, CS, TS, TC, LCS, LCC, STS, STC, LTS, LTC, LSTS, LSTC, L | 1 Bit            |
+| Int         | D, CN, W, TN, STN, SW     | 2 Byte            |
+| Word        | D, TN, CN, SW, STN, W, SD | 2 Byte            |
+| DInt        | D, LCN, W, SW, LTN, LSTN  | 4 Byte            |
+| DWord       | D, LCN, W, SW, LTN, LSTN  | 4 Byte            |
+| Real        | D, W, SW                  | 4 Byte            |
+| LReal       | D, W, SW                  | 8 Byte            |
+| String      | D, W, SW                  | 1 - 80 characters |
+
+To configure the SLMP Connector, proceed as following:
 
 - go to the tab 'Get data' and select tab 'Databus connectors'
 - select the SLMP Connector
@@ -76,24 +91,11 @@ As soon as the SLMP Connector is installed and started on the same IED as the II
 ![configuration1](/docs/graphics/Configuration1.png)
 
 - under column 'Actions' of the newly created PLC, choose 'Add tag'
-- configure the seetins for tag "Tag_Word" as needed and save
+- configure the seetins for tag 'Tag_Word' as needed and save
 - under column 'Actions' of the newly created PLC, choose 'Add tag'
-- configure the seetins for tag "Tag_Bool" as needed and save
+- configure the seetins for tag 'Tag_Bool' as needed and save
 
 ![configuration2](/docs/graphics/Configuration2.png)
-
-Here is an overview of permitted data types for the Mitsubishi iQR/iQF PLCs:
-
-| Data type   | Operand | Length |
-| ----------- | ----------- |----------- |
-| Bool        | D, M, X, Y, F, B, SB, W, SW, SD, SM, CC, CS, TS, TC, LCS, LCC, STS, STC, LTS, LTC, LSTS, LSTC, L | 1 Bit            |
-| Int         | D, CN, W, TN, STN, SW     | 2 Byte            |
-| Word        | D, TN, CN, SW, STN, W, SD | 2 Byte            |
-| DInt        | D, LCN, W, SW, LTN, LSTN  | 4 Byte            |
-| DWord       | D, LCN, W, SW, LTN, LSTN  | 4 Byte            |
-| Real        | D, W, SW                  | 4 Byte            |
-| LReal       | D, W, SW                  | 8 Byte            |
-| String      | D, W, SW                  | 1 - 80 characters |
 
 - select the newly created PLC and click 'Deploy' to save the configuration and start the project
 
