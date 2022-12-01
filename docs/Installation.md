@@ -68,7 +68,7 @@ Here is an overview of permitted data types for the Mitsubishi iQR/iQF PLCs:
 
 | Data type   | Operand     | Length     |
 | ----------- | ----------- |----------- |
-| Bool        | D, M, X, Y, F, B, SB, W, SW, SD, SM, CC, CS, TS, TC, LCS, LCC, STS, STC, LTS, LTC, LSTS, LSTC, L | 1 Bit            |
+| Bool        | D, M, X, Y, F, B, SB, W, SW, SD, SM, CC, CS, TS, TC, <br>LCS, LCC, STS, STC, LTS, LTC, LSTS, LSTC, L | 1 Bit            |
 | Int         | D, CN, W, TN, STN, SW     | 2 Byte            |
 | Word        | D, TN, CN, SW, STN, W, SD | 2 Byte            |
 | DInt        | D, LCN, W, SW, LTN, LSTN  | 4 Byte            |
