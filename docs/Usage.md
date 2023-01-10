@@ -26,19 +26,20 @@ To print out the SLMP Connector metadata, follow these steps:
 
 Now you can see the configured datapoints according to SLMP Configurator settings:
 
-- ***Tag_Word*** with unique id 102
-- ***Tag_Bool*** with unique id 103
+- ***X0*** with unique id 102
+- ***D10*** with unique id 103
+- ***D100*** with unique id 104
 
 ## Write data
 
 To write some data on the SLMP tags, you must fetch the tag ID from metadata payload based on the tag name. Please follow these steps:
 
-- for the ***Tag_Word*** tag, create an inject node with this JSON payload: `{ "vals": [ { "id": "102", "val": "111" } ] }` ***TODO*** ?? raus ??
-- for the ***Tag_Bool*** tag, create an inject node with this JSON payload: `{ "vals": [ { "id": "103", "val": "true" } ] }` ***TODO***
+- for the ***D10*** tag, create an inject node to write the value 4444 with this JSON payload: `{"vals":[{"id":"103","val":"4444"}]}`
+- for the ***D10*** tag, create another inject node to write the value 9999 with this JSON payload: `{"vals":[{"id":"103","val":"9999"}]}`
 - create a mqtt out node
 - set the server to 'ie-databus' with port 1883 and corresponding user name/password ('edge'/'edge')
 - set the topic to `ie/d/j/simatic/v1/slmp1/dp/w/FX5`
-- connect all inject nodes to the mqtt out node
+- connect the inject nodes to the mqtt out node
 - deploy the flow
 - click the single inject buttons, to write the values
 
@@ -57,13 +58,13 @@ To print out the transfered SLMP Connector data, you must fetch the tag ID from 
 
 ![read_data_flow](/docs/graphics/Read_Data_Flow.png)
 
-Output for tag ***Tag_Word*** with ID 102:
+The tag ***D100*** with ID 104 is filled automatically by the PLC program (counter) and the output is printed continuously:
 
-![read_bool](/docs/graphics/Read_1.png)
+![read_1](/docs/graphics/Read_1.png)
 
-Output for tag ***Tag_Bool*** with ID 103:
+If some data is written on tag ***D10*** with ID 103, the output looks like the following:
 
-![read_int](/docs/graphics/Read_2.png)
+![read_2](/docs/graphics/Read_2.png)
 
 ## Use Data Service
 

@@ -64,7 +64,7 @@ Here we configure a connection to a Mitsubishi PLC FX5U (iQF) using the SLMP Con
 
 ### PLC project
 
-The used PLC project *FX5.gx3* can be found in the [src folder](/src/).
+The used PLC project *Test.gx3* can be found in the [src folder](/src/).
 
 ## Configuration
 

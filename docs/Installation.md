@@ -99,9 +99,7 @@ To configure the SLMP Connector, proceed as following:
 ![configuration1](/docs/graphics/Configuration1.png)
 
 - under column 'Actions' of the newly created PLC, choose 'Add tag'
-- configure the seetins for tag 'Tag_Word' as needed and save
-- under column 'Actions' of the newly created PLC, choose 'Add tag'
-- configure the seetins for tag 'Tag_Bool' as needed and save
+- configure the tags accordingly and save
 
 ![configuration2](/docs/graphics/Configuration2.png)
 
