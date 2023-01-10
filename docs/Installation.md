@@ -81,6 +81,10 @@ The PLC has the following configuration within GX Works 3:
 
 ![GXWorks_Config](/docs/graphics/GXWorks_Config.png)
 
+The PLC program looks like the following:
+
+![GXWorks_Program](/docs/graphics/GXWorks_Program.png)
+
 To configure the SLMP Connector, proceed as following:
 
 - go to the tab 'Get data' and select tab 'Databus connectors'
