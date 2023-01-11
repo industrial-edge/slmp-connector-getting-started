@@ -1,6 +1,6 @@
 # SLMP Connector
 
-Using the Industrial Edge applications SLMP Configurator and SLMP Connector.
+This example shows how to use the Industrial Edge app SLMP Connector.
 
 * [SLMP Connector](#slmp-connector)
   * [Description](#description)
