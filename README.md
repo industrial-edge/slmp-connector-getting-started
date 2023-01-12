@@ -5,7 +5,7 @@ This example shows how to use the Industrial Edge app SLMP Connector.
 * [SLMP Connector](#slmp-connector)
   * [Description](#description)
     * [Overview](#overview)
-    * [General Task](#general-task)
+    * [General task](#general-task)
   * [Requirements](#requirements)
     * [Prerequisites](#prerequisites)
     * [Used components](#used-components)
@@ -29,7 +29,7 @@ These PLC variants are supported:
 
 The SLMP Connector is an application that runs on the individual IED. Connections can be configured using the Common Configurator for Industrial Edge. The connector transfers the value series of selected data points from a PLC to the Databus. From there the data can be used within other Edge apps, e.g. the Flow Creator.
 
-### General Task
+### General task
 
 Here we configure a connection to a Mitsubishi PLC FX5U (iQF) using the SLMP Connector. The FX5U acts as SLMP server and the IED acts as SLMP client. The data is published on the IE Databus. By using the application IE Flow Creator, we fetch the metadata of the SLMP Connector, write some data on the configured tags and read out the new data.
 
@@ -41,9 +41,7 @@ Here we configure a connection to a Mitsubishi PLC FX5U (iQF) using the SLMP Con
 
 * Access to an Industrial Edge Management (IEM) with onboarded Industrial Edge Device (IED)
 * IEM: Installed system configurator for Databus
-* IED: Installed system app Databus
-* IED: Installed app SLMP Connector
-* IED: Installed app IE Flow Creator
+* IED: Installed apps IE Databus, IE Flow Creator, IIH Configurator, IIH Registry Service, SLMP Connector, Data Service (optional)
 * IED is connected to Mitsubishi PLC via Ethernet
 * GX Works 3 project loaded on PLC
 * Google Chrome (Version ≥ 72)
@@ -54,10 +52,10 @@ Here we configure a connection to a Mitsubishi PLC FX5U (iQF) using the SLMP Con
   * IE Databus Configurator V1.7.8
 * Industrial Edge Device (OS) V1.8.0-6
   * IE Databus V1.7.1
-  * IIH Configurator V1.5.0
-  * Registry Service V1.5.0
-  * SLMP Connector V2.0.0-2
   * IE Flow Creator V1.10.0-3
+  * IIH Configurator V1.5.0
+  * IIH Registry Service V1.5.0
+  * SLMP Connector V2.0.0-2
   * Data Service V1.5.0
 * PLC: Mitsubishi FX5U
 * GX Works 3 (Mitsubishi engineering software)
