@@ -13,7 +13,7 @@ When working with connectors on Industrial Edge, the **IE Databus** app is requi
 Make sure the following apps are installed and running on the Industrial Edge Device (IED):
 - IE Databus
 - IIH Configurator
-- Registry Service
+- IIH Registry Service
 
 ## Install SLMP Connector
 
@@ -36,14 +36,14 @@ The system app Databus is essential to exchange data between a PLC and the IED. 
 You need to create a user and one or more topics in the Databus configuration, which cover the SLMP data:
 
 - ***ie/m/j/simatic/v1/slmp1/dp*** for SLMP metadata
-- ***ie/d/j/simatic/v1/slmp1/dp*** for SLMP data
+- ***ie/d/j/simatic/v1/slmp1/dp/#*** for SLMP data
 
 Therefore follow these steps:
 
 - open the Industrial Edge Management (IEM)
 - go to 'Data Connections' > IE Databus
 - select the corresponding IED
-- create the topic `ie/#`and a dedicated user with username and password ('edge'/'edge'), set permissions to 'Publish and Subscribe'
+- create the topic `ie/#` and a dedicated user with username and password ('edge'/'edge'), set permissions to 'Publish and Subscribe'
 - deploy the configuration and wait for the job to be finished successfully
 
 ![databus](/docs/graphics/Databus.png)
@@ -62,7 +62,7 @@ With the IIH Configurator, you can configure several connectors and publish the 
 
 ![IIH_Settings](/docs/graphics/IIH_Settings.png)
 
-As soon as the SLMP Connector is installed and started on the same IED as the IIH Configurator, the connector is visible within the configurator. In this example we want to configure an SLMP connection to a Mitsubishi FX5U (iQF) PLC.
+As soon as the SLMP Connector is installed and started on the same IED as the IIH Configurator, the connector is visible within the configurator. In this example we want to configure a SLMP connection to a Mitsubishi FX5U (iQF) PLC.
 
 Here is an overview of permitted data types for the Mitsubishi iQR/iQF PLCs:
 
@@ -111,4 +111,4 @@ To configure the SLMP Connector, proceed as following:
 
 ![Connected](/docs/graphics/IIH_Connected.png)
 
-Now data can be transferred via the SLMP connection. Please find more information in the  [Usage](/docs/Usage.md) documentation.
+Now data can be transferred via the SLMP connection. Please find more information in the [Usage](/docs/Usage.md) documentation.
