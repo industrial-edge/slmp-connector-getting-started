@@ -27,7 +27,7 @@ These PLC variants are supported:
 * Mitsubishi iQR series
 * Mitsubishi iQF series
 
-The SLMP Connector is an application that runs on the individual IED. Connections can be configured using the Common Configurator for Industrial Edge. The connector transfers the value series of selected data points from a PLC to the Databus. From there the data can be used within other Edge apps, e.g. the Flow Creator.
+The SLMP Connector is an application that runs on the individual IED. Connections can be configured using the IIH Configurator for Industrial Edge. The connector transfers the value series of selected data points from a PLC to the Databus. From there the data can be used within other Edge apps, e.g. the Flow Creator.
 
 ### General task
 
