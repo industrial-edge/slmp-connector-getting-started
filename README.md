@@ -27,11 +27,11 @@ These PLC variants are supported:
 * Mitsubishi iQR series
 * Mitsubishi iQF series
 
-The SLMP Connector is an application that runs on the individual IED. Connections can be configured using the IIH Configurator for Industrial Edge. The connector transfers the value series of selected data points from a PLC to the Databus. From there the data can be used within other Edge apps, e.g. the Flow Creator.
+The SLMP Connector is an application that runs on the individual Industrial Edge Device. Connections can be configured using the Common Configurator for Industrial Edge. The connector transfers the value series of selected data points from a PLC to the Databus. From there the data can be used within other Edge apps, e.g. the Flow Creator.
 
 ### General task
 
-Here we configure a connection to a Mitsubishi PLC FX5U (iQF) using the SLMP Connector. The FX5U acts as SLMP server and the IED acts as SLMP client. The data is published on the IE Databus. By using the application IE Flow Creator, we fetch the metadata of the SLMP Connector, write some data on the configured tags and read out the new data.
+Here we configure a connection to a Mitsubishi PLC FX5U (iQF) using the SLMP Connector. The FX5U acts as SLMP server and the Industrial Edge Device acts as SLMP client. The data is published on the Databus. By using the application Flow Creator, we fetch the metadata of the SLMP Connector, write some data on the configured tags and read out the new data.
 
 ![overview](/docs/graphics/Overview.png)
 
@@ -41,21 +41,20 @@ Here we configure a connection to a Mitsubishi PLC FX5U (iQF) using the SLMP Con
 
 * Access to an Industrial Edge Management (IEM) with onboarded Industrial Edge Device (IED)
 * IEM: Installed system configurator for Databus
-* IED: Installed apps IE Databus, IE Flow Creator, IIH Configurator, IIH Registry Service, SLMP Connector, Data Service (optional)
+* IED: Installed apps Databus, Flow Creator, common Configurator, Registry Service, SLMP Connector, IIH Essentials (optional)
 * IED is connected to Mitsubishi PLC via Ethernet
 * GX Works 3 project loaded on PLC
 * Google Chrome (Version ≥ 72)
 
 ### Used components
 
-* Industrial Edge Management (IEM) V1.5.1-4 / V1.8.6
-  * IE Databus Configurator V1.7.8
-* Industrial Edge Device (OS) V1.8.0-6
-  * IE Databus V1.7.1
-  * IE Flow Creator V1.10.0-3
-  * IIH Configurator V1.5.0
-  * IIH Registry Service V1.5.0
-  * SLMP Connector V2.0.0-2
+* Industrial Edge Management (IEM) V1.14.10
+* Industrial Edge Virtual Device (OS) V1.16.1-1-a
+  * Databus V2.2.0-3
+  * Flow Creator V1.16.0-2
+  * Common Configurator V1.9.0-4
+  * Registry Service V1.9.0-0
+  * SLMP Connector V2.1.0-0
   * Data Service V1.5.0
 * PLC: Mitsubishi FX5U
 * GX Works 3 (Mitsubishi engineering software)
