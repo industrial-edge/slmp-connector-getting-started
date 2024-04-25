@@ -33,7 +33,7 @@ The SLMP Connector is an application that runs on the individual Industrial Edge
 
 Here we configure a connection to a Mitsubishi PLC FX5U (iQF) using the SLMP Connector. The FX5U acts as SLMP server and the Industrial Edge Device acts as SLMP client. The data is published on the Databus. By using the application Flow Creator, we fetch the metadata of the SLMP Connector, write some data on the configured tags and read out the new data.
 
-![overview](/docs/graphics/Overview.png)
+![overview](/docs/graphics/Slmparchi.png)
 
 ## Requirements
 
@@ -48,14 +48,15 @@ Here we configure a connection to a Mitsubishi PLC FX5U (iQF) using the SLMP Con
 
 ### Used components
 
-* Industrial Edge Management (IEM) V1.14.10
-* Industrial Edge Virtual Device (OS) V1.16.1-1-a
-  * Databus V2.2.0-3
-  * Flow Creator V1.16.0-2
+* Industrial Edge Management (IEM) V1.16.11
+* Industrial Edge Virtual Device (OS) V2.1.0-22-x86-64
+  * Databus V2.3.2-5
+  * Flow Creator V1.17.0-2
   * Common Configurator V1.9.0-4
-  * Registry Service V1.9.0-0
+  * Common Import Converter V2.1.0-2
+  * Registry Service V1.10.0-0
   * SLMP Connector V2.1.0-0
-  * Data Service V1.5.0
+  * IIH Essentials V1.10.2
 * PLC: Mitsubishi FX5U
 * GX Works 3 (Mitsubishi engineering software)
 
