@@ -4,7 +4,7 @@
   - [Overview](#overview)
   - [Install SLMP Connector](#install-slmp-connector)
   - [Configure Databus](#configure-databus)
-  - [Configure SLMP via IIH Configurator](#configure-slmp-via-iih-configurator)
+  - [Configure SLMP via Common Configurator](#configure-slmp-via-common-configurator)
 
 ## Overview
 
