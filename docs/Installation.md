@@ -87,10 +87,10 @@ The PLC program looks like the following:
 
 To configure the SLMP Connector, proceed as following:
 
-- go to the tab 'Get data' and select tab 'Databus connectors'
+- go to the tab 'Get data' and select tab 'Connector Configuration'
 - select the SLMP Connector
 
-![ConnectorOverview](/docs/graphics/IIH_Connector_Overview.png)
+![SLMPoverview](/docs/graphics/SLMPoverview.PNG)
 
 - switch to tab 'Tags'
 - choose 'Add data source'
