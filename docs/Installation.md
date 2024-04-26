@@ -46,7 +46,7 @@ Therefore follow these steps:
 - create the topic `ie/#` and a dedicated user with username and password ('edge'/'edge'), set permissions to 'Publish and Subscribe'
 - deploy the configuration and wait for the job to be finished successfully
 
-![databus](/docs/graphics/Databus.png)
+![databus](/docs/graphics/SLMPdatabus.PNG)
 
 ## Configure SLMP via Common Configurator
 
