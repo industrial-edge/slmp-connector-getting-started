@@ -105,7 +105,7 @@ To configure the SLMP Connector, proceed as following:
 
 - select the newly created PLC and click 'Deploy' to save the configuration and start the project
 
-![Deploy](/docs/graphics/IIH_Deploy.png)
+![SLMPdeploy](/docs/graphics/SLMPdeploy.PNG)
 
 - back on the overview page 'Databus connectors', the status of the SLMP Connector should be shown as **connected**
 
