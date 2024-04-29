@@ -20,7 +20,7 @@ To print out the SLMP Connector metadata, follow these steps:
 - create a debug node and connecto to the mqtt in node
 - deploy the flow and watch the debug window
 
-![metadata_flow](/docs/graphics/Metadata_Flow.png)
+![SLMPreaddata.PNG](/docs/graphics/SLMPreaddata.PNG)
 
 ![metadata](/docs/graphics/Metadata.png)
 
@@ -28,13 +28,13 @@ Now you can see the configured datapoints according to SLMP Configurator setting
 
 - ***Tag1*** with unique id 102
 - ***tag2*** with unique id 103
-- 
+  
 ## Write data
 
 To write some data on the SLMP tags, you must fetch the tag ID from metadata payload based on the tag name. Please follow these steps:
 
-- for the ***D10*** tag, create an inject node to write the value 4444 with this JSON payload: `{"vals":[{"id":"103","val":"4444"}]}`
-- for the ***D10*** tag, create another inject node to write the value 9999 with this JSON payload: `{"vals":[{"id":"103","val":"9999"}]}`
+- for the ***tag2*** tag, create an inject node to write the value 4444 with this JSON payload: `{"vals":[{"id":"103","val":"4444"}]}`
+- for the ***tag2*** tag, create another inject node to write the value 9999 with this JSON payload: `{"vals":[{"id":"103","val":"9999"}]}`
 - create a mqtt out node
 - set the server to 'ie-databus' with port 1883 and corresponding user name/password ('edge'/'edge')
 - set the topic to `ie/d/j/simatic/v1/slmp1/dp/w/FX5`
