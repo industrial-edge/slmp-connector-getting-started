@@ -4,11 +4,11 @@
   - [Read metadata](#read-metadata)
   - [Write data](#write-data)
   - [Read data](#read-data)
-  - [Use Data Service](#use-data-service)
+  - [Use IIH Essentials](#use-IIH-Essentials)
   
-Via the IE Flow Creator, we can write and read the SLMP data.
+Via the Flow Creator, we can write and read the SLMP data.
 
-The used flow can be downloaded [here](/src/flow.json) and imported into the IE Flow Creator, that is running on the same IED as the SLMP Connector.
+The used flow can be downloaded [here](/src/flow.json) and imported into the Flow Creator, that is running on the same IED as the SLMP Connector.
 
 ## Read metadata
 
@@ -26,10 +26,9 @@ To print out the SLMP Connector metadata, follow these steps:
 
 Now you can see the configured datapoints according to SLMP Configurator settings:
 
-- ***X0*** with unique id 102
-- ***D10*** with unique id 103
-- ***D100*** with unique id 104
-
+- ***Tag1*** with unique id 102
+- ***tag2*** with unique id 103
+- 
 ## Write data
 
 To write some data on the SLMP tags, you must fetch the tag ID from metadata payload based on the tag name. Please follow these steps:
