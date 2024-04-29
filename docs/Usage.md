@@ -20,9 +20,9 @@ To print out the SLMP Connector metadata, follow these steps:
 - create a debug node and connecto to the mqtt in node
 - deploy the flow and watch the debug window
 
-![SLMPreaddata.PNG](/docs/graphics/SLMPreaddata.PNG)
+![Metadata_Flow](/docs/graphics/Metadata_Flow.png)
 
-![metadata](/docs/graphics/Metadata.png)
+![SLMPreaddata](/docs/graphics/SLMPreaddata.PNG)
 
 Now you can see the configured datapoints according to SLMP Configurator settings:
 
