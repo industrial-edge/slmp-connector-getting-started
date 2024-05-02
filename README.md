@@ -77,7 +77,7 @@ You can find further information about the following steps in the [Configuration
 
 As soon as the SLMP Connector is configured, data can be transfered.
 
-You can find further information about how to handle the data via the IE Flow Creator in the [Usage](/docs/Usage.md) documentation:
+You can find further information about how to handle the data via the Flow Creator in the [Usage](/docs/Usage.md) documentation:
 
 * [Read metadata](/docs/Usage.md#read-metadata)
 * [Write data](/docs/Usage.md#write-data)
