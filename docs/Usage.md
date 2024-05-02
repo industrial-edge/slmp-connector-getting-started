@@ -58,22 +58,22 @@ To print out the transfered SLMP Connector data, you must fetch the tag ID from 
 
 ![read_data_flow](/docs/graphics/Read_Data_Flow.png)
 
-The tag ***D100*** with ID 104 is filled automatically by the PLC program (counter) and the output is printed continuously:
+The tag ***Tag2*** with ID 103 is filled automatically by the PLC program (counter) and the output is printed continuously:
 
-![read_1](/docs/graphics/Read_1.png)
+![SLMPdataauto](/docs/graphics/SLMPdataauto.PNG)
 
-If some data is written on tag ***D10*** with ID 103, the output looks like the following:
+If some data is written on tag ***Tag3*** with ID 104, the output looks like the following:
 
-![read_2](/docs/graphics/Read_2.png)
+![SLMPdatawrite](/docs/graphics/SLMPdatawrite.PNG)
 
-## Use Data Service
+## Use IIH Essentials 
 
-The app Data Service collects the data out of different connectors and stores it for a defined time period. This is a prerequisite for other apps like Performance Insight.
+The app IIH Essentials collects the data out of different connectors and stores it for a defined time period. This is a prerequisite for other apps like Performance Insight.
 
 To activate the data transfer from the SLMP Connector, proceed as following:
 
 - open the IED web interface
-- open the app Data Service
+- open the app IIH Essentials
 - go to tab 'Connectors' and select 'SLMP Connector'
 - select the edit button and enter the user name and the password for the Databus user ('edge'/'edge')
 - activate the adapter and save
@@ -84,4 +84,4 @@ To activate the data transfer from the SLMP Connector, proceed as following:
 
 ![DataServiceAdapter](/docs/graphics/DataService_Add.png)
 
-- data is now collected by the Data Service and can be used by further apps
+- data is now collected by the IIH Essentials and can be used by further apps
