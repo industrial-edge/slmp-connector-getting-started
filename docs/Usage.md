@@ -22,18 +22,19 @@ To print out the SLMP Connector metadata, follow these steps:
 
 ![Metadata_Flow](/docs/graphics/Metadata_Flow.png)
 
-![SLMPreaddata](/docs/graphics/SLMPreaddata.PNG)
+![SLMPreaddata](/docs/graphics/SLMPmetadatnew.PNG)
 
 Now you can see the configured datapoints according to SLMP Configurator settings:
 
 - ***Tag1*** with unique id 102
-- ***tag2*** with unique id 103
+- ***Tag2*** with unique id 103
+- ***Tag2*** with unique id 104
   
 ## Write data
 
 To write some data on the SLMP tags, you must fetch the tag ID from metadata payload based on the tag name. Please follow these steps:
 
-- for the ***tag2*** tag, create an inject node to write the value 4444 with this JSON payload: `{"vals":[{"id":"103","val":"4444"}]}`
+- for the ***Tag4*** tag, create an inject node to write the value 4444 with this JSON payload: `{"vals":[{"id":"104","val":"4444"}]}`
 - for the ***tag2*** tag, create another inject node to write the value 9999 with this JSON payload: `{"vals":[{"id":"103","val":"9999"}]}`
 - create a mqtt out node
 - set the server to 'ie-databus' with port 1883 and corresponding user name/password ('edge'/'edge')
