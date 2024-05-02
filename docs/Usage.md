@@ -74,8 +74,8 @@ To activate the data transfer from the SLMP Connector, proceed as following:
 
 - open the IED web interface
 - open the app IIH Essentials
-- go to tab 'Connectors' and select 'SLMP Connector'
-- select the edit button and enter the user name and the password for the Databus user ('edge'/'edge')
+- go to tab 'Connectors' and select 'SLMP Connector' 
+- select the edit button and activate the connector 
 - activate the adapter and save
 
 ![DataServiceAdapter](/docs/graphics/DataService_Adapter.png)
