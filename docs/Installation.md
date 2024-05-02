@@ -101,11 +101,11 @@ To configure the SLMP Connector, proceed as following:
 - under column 'Actions' of the newly created PLC, choose 'Add tag'
 - configure the tags accordingly and save
 
-![SLMPaddtag](/docs/graphics/SLMPaddtag.png)
+![SLMPaddtagnew](/docs/graphics/SLMPaddtagnew.PNG)
 
 - select the newly created PLC and click 'Deploy' to save the configuration and start the project
 
-![SLMPdeploy](/docs/graphics/SLMPdeploy.PNG)
+![SLMPsaveconfignew](/docs/graphics/SLMPsaveconfignew.PNG)
 
 - back on the overview page 'Databus connectors', the status of the SLMP Connector should be shown as **connected**
 
