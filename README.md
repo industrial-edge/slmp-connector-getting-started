@@ -70,8 +70,8 @@ You can find further information about the following steps in the [Configuration
 
 - [Overview](/docs/Installation.md#overview)
 - [Install SLMP Connector](/docs/Installation.md#install-slmp-connector)
-- [Configure IE Databus](/docs/Installation.md#configure-ie-databus)
-- [Configure SLMP via IIH Configurator](/docs/Installation.md#configure-slmp-via-iih-configurator)
+- [Configure Databus](/docs/Installation.md#configure-Databus)
+- [Configure SLMP via Common Configurator](/docs/Installation.md#configure-slmp-via-Common-Configurator)
 
 ## Usage
 
@@ -82,7 +82,7 @@ You can find further information about how to handle the data via the IE Flow Cr
 * [Read metadata](/docs/Usage.md#read-metadata)
 * [Write data](/docs/Usage.md#write-data)
 * [Read data](/docs/Usage.md#read-data)
-* [Use Data Service](/docs/Usage.md#use-data-service)
+* [Use IIH Essentials](/docs/Usage.md#use-IIH-Essentials)
 
 ## Documentation
 
