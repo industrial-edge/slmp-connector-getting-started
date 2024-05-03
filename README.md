@@ -41,7 +41,7 @@ Here we configure a connection to a Mitsubishi PLC FX5U (iQF) using the SLMP Con
 
 * Access to an Industrial Edge Management (IEM) with onboarded Industrial Edge Device (IED)
 * IEM: Installed system configurator for Databus
-* IED: Installed apps Databus, Flow Creator, common Configurator, Registry Service, SLMP Connector, IIH Essentials (optional)
+* IED: Installed apps Databus, Flow Creator, Common Configurator, Registry Service, SLMP Connector, IIH Essentials (optional)
 * IED is connected to Mitsubishi PLC via Ethernet
 * GX Works 3 project loaded on PLC
 * Google Chrome (Version ≥ 72)
