@@ -3,17 +3,17 @@
 - [Configuration](#configuration)
   - [Overview](#overview)
   - [Install SLMP Connector](#install-slmp-connector)
-  - [Configure IE Databus](#configure-ie-databus)
-  - [Configure SLMP via IIH Configurator](#configure-slmp-via-iih-configurator)
+  - [Configure Databus](#configure-databus)
+  - [Configure SLMP via Common Configurator](#configure-slmp-via-common-configurator)
 
 ## Overview
 
-When working with connectors on Industrial Edge, the **IE Databus** app is required to exchange the data via MQTT. The configuration of the connectors is done via the **IIH Configurator** app. Therefore also the **Registry Service** app is necessary, to find installed connectors on an Industrial Edge Device.
+When working with connectors on Industrial Edge, the **Databus** app is required to exchange the data via MQTT. The configuration of the connectors is done via the **Common Configurator** app. Therefore also the **Registry Service** app is necessary, to find installed connectors on an Industrial Edge Device.
 
 Make sure the following apps are installed and running on the Industrial Edge Device (IED):
-- IE Databus
-- IIH Configurator
-- IIH Registry Service
+- Databus
+- Common Configurator
+- Registry Service
 
 ## Install SLMP Connector
 
@@ -29,7 +29,7 @@ The SLMP Connector app must be available in your IEM catalog. Proceed the follow
 
 ![app](/docs/graphics/SLMP_App.png)
 
-## Configure IE Databus
+## Configure Databus
 
 The system app Databus is essential to exchange data between a PLC and the IED. The SLMP Connector sends the transfered data to the Databus on the IED. From there the data can be used for further processing.
 
@@ -41,28 +41,28 @@ You need to create a user and one or more topics in the Databus configuration, w
 Therefore follow these steps:
 
 - open the Industrial Edge Management (IEM)
-- go to 'Data Connections' > IE Databus
+- go to 'Data Connections' > Databus
 - select the corresponding IED
 - create the topic `ie/#` and a dedicated user with username and password ('edge'/'edge'), set permissions to 'Publish and Subscribe'
 - deploy the configuration and wait for the job to be finished successfully
 
-![databus](/docs/graphics/Databus.png)
+![SLMPdatabus](/docs/graphics/SLMPdatabus.PNG)
 
-## Configure SLMP via IIH Configurator
+## Configure SLMP via Common Configurator
 
-With the IIH Configurator, you can configure several connectors and publish the data to the IE Databus. Therefore, you must enter the Databus credentials within the IIH Configurator:
+With the Common Configurator, you can configure several connectors and publish the data to the Databus. Therefore, you must enter the Databus credentials within the Common Configurator:
 
 - open the IED web interface
-- open the app IIH Configurator
+- open the app Common Configurator
 - go to the tab 'Settings' and select the menu 'Databus credentials'
 - enter the databus service name: 'ie-databus:1883'
 - in tab 'Data Publisher settings' enter the databus user name and password ('edge'/'edge')
 - in tab 'Data Subscriber settings' enter the databus user name and password ('edge'/'edge')
 - Save the settings
 
-![IIH_Settings](/docs/graphics/IIH_Settings.png)
+![SLMPdatabuscc](/docs/graphics/SLMPdatabuscc.PNG)
 
-As soon as the SLMP Connector is installed and started on the same IED as the IIH Configurator, the connector is visible within the configurator. In this example we want to configure a SLMP connection to a Mitsubishi FX5U (iQF) PLC.
+As soon as the SLMP Connector is installed and started on the same IED as the Common Configurator, the connector is visible within the configurator. In this example we want to configure a SLMP connection to a Mitsubishi FX5U (iQF) PLC.
 
 Here is an overview of permitted data types for the Mitsubishi iQR/iQF PLCs:
 
@@ -87,10 +87,10 @@ The PLC program looks like the following:
 
 To configure the SLMP Connector, proceed as following:
 
-- go to the tab 'Get data' and select tab 'Databus connectors'
+- go to the tab 'Get data' and select tab 'Connector Configuration'
 - select the SLMP Connector
 
-![ConnectorOverview](/docs/graphics/IIH_Connector_Overview.png)
+![SLMPoverview](/docs/graphics/SLMPoverview.PNG)
 
 - switch to tab 'Tags'
 - choose 'Add data source'
@@ -101,11 +101,11 @@ To configure the SLMP Connector, proceed as following:
 - under column 'Actions' of the newly created PLC, choose 'Add tag'
 - configure the tags accordingly and save
 
-![configuration2](/docs/graphics/Configuration2.png)
+![SLMPaddtagnew](/docs/graphics/SLMPaddtagnew.PNG)
 
 - select the newly created PLC and click 'Deploy' to save the configuration and start the project
 
-![Deploy](/docs/graphics/IIH_Deploy.png)
+![SLMPsaveconfignew](/docs/graphics/SLMPsaveconfignew.PNG)
 
 - back on the overview page 'Databus connectors', the status of the SLMP Connector should be shown as **connected**
 
